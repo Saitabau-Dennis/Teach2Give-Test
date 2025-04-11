@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Tool</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for specific elements like the bar chart */
+        .bar {
+            background-color: #8b5cf6; /* Purple for bars */
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <main class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- 1. Create and Schedule Content -->
+        <section class="bg-yellow-50 rounded-lg p-6">
+            <h2 class="text-xl font-bold">Create and schedule content <span class="text-purple-700">quicker.</span></h2>
+            <button class="mt-4 bg-yellow-500 text-purple-700 px-4 py-2 rounded-full flex items-center">
+                Create Post <span class="ml-2">★ →</span>
+            </button>
+        </section>
+
+        <!-- 2. Social Media 10x Faster with AI (Spans 2 columns on medium screens) -->
+        <section class="bg-purple-800 text-white rounded-lg p-6 md:col-span-2">
+            <h1 class="text-2xl md:text-4xl font-bold">Social Media <span class="text-yellow-300">10x Faster with AI</span></h1>
+            <div class="flex mt-2">
+                <span class="text-yellow-400">★★★★★</span>
+                <p class="ml-2 text-sm">Over 4,000 5-star reviews</p>
+            </div>
+        </section>
+
+        <!-- 3. Schedule to Social Media -->
+        <section class="bg-purple-100 rounded-lg p-6">
+            <h2 class="text-xl font-bold">Schedule to social media.</h2>
+            <div class="bg-white p-4 mt-2 rounded">
+                <p class="text-sm font-semibold">Best Time to Post</p>
+                <div class="flex justify-between text-xs mt-2">
+                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+                </div>
+                <div class="flex justify-between mt-2">
+                    <div class="bar h-8 w-4"></div>
+                    <div class="bar h-12 w-4"></div>
+                    <div class="bar h-16 w-4"></div>
+                    <div class="bar h-10 w-4"></div>
+                </div>
+                <div class="flex justify-between text-xs mt-1">
+                    <span>12a</span><span>3a</span><span>6a</span><span>9a</span><span>12p</span>
+                </div>
+                <p class="text-xs mt-1">Most Active: 9a</p>
+            </div>
+            <p class="text-sm mt-2">Optimize post timings to publish content at the perfect time for your audience.</p>
+        </section>
+
+        <!-- 4. Write Your Content Using AI -->
+        <section class="bg-yellow-300 rounded-lg p-6">
+            <h2 class="text-xl font-bold">Write your content using AI.</h2>
+            <div class="bg-white p-3 mt-2 rounded-lg shadow">
+                <div class="flex items-start">
+                    <div class="w-8 h-8 bg-purple-200 rounded-full mr-2"></div>
+                    <p class="text-sm">“Give me 5 tips to grow my follower on Insta!”</p>
+                </div>
+                <div class="flex items-start mt-2">
+                    <div class="w-8 h-8 bg-purple-200 rounded-full mr-2"></div>
+                    <p class="text-sm text-gray-600">“Certainly! Here are five tips to help you grow...”</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Manage Multiple Accounts -->
+        <section class="bg-white rounded-lg p-6">
+            <div class="flex space-x-2">
+                <span class="bg-gray-200 p-2 rounded flex items-center">
+                    <span class="w-4 h-4 bg-purple-500 rounded-full mr-1"></span> IG @YourCo
+                </span>
+                <span class="bg-gray-200 p-2 rounded flex items-center">
+                    <span class="w-4 h-4 bg-blue-500 rounded-full mr-1"></span> X @YourCo
+                </span>
+            </div>
+            <h2 class="text-xl font-bold mt-2">Manage multiple accounts and platforms.</h2>
+        </section>
+
+        <!-- 6. Maintain a Consistent Posting Schedule -->
+        <section class="bg-yellow-300 rounded-lg p-6">
+            <h2 class="text-xl font-bold">Maintain a consistent posting schedule.</h2>
+            <div class="bg-white p-3 mt-2 rounded">
+                <p class="text-sm">August 2024 - Week 1</p>
+                <div class="flex space-x-2 mt-2">
+                    <span class="bg-purple-500 text-white px-2 py-1 rounded">✔ Mon</span>
+                    <span class="bg-gray-200 px-2 py-1 rounded">Tue</span>
+                    <span class="bg-purple-500 text-white px-2 py-1 rounded">✔ Wed</span>
+                    <span class="bg-gray-200 px-2 py-1 rounded">Thu</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. >56% Faster Audience Growth -->
+        <section class="bg-white rounded-lg p-6">
+            <h2 class="text-xl font-bold">>56% faster audience growth <span class="text-purple-700">↑</span></h2>
+            <div class="flex space-x-2 mt-4">
+                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+            </div>
+        </section>
+
+        <!-- 8. Follower Growth -->
+        <section class="bg-purple-200 rounded-lg p-6">
+            <h2 class="text-xl font-bold">Follower Growth</h2>
+            <p class="text-2xl font-bold">20,642 <span class="text-green-600">+40%</span></p>
+            <div class="bg-white p-2 mt-2 rounded">
+                <div class="flex space-x-1">
+                    <div class="bar h-6 w-4"></div>
+                    <div class="bar h-8 w-4"></div>
+                    <div class="bar h-4 w-4"></div>
+                </div>
+                <p class="text-sm mt-1">Followers 89,532 <span class="text-green-600">+70%</span></p>
+            </div>
+        </section>
+
+        <!-- 9. Grow Followers with Non-Stop Content -->
+        <section class="bg-purple-800 text-white rounded-lg p-6">
+            <h2 class="text-xl font-bold">Grow followers with non-stop content.</h2>
+        </section>
+    </main>
+</body>
+</html>
