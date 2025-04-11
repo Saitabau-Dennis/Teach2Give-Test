@@ -1,130 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Tool</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles for specific elements like the bar chart */
-        .bar {
-            background-color: #8b5cf6; /* Purple for bars */
-            border-radius: 4px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#FFD700',
+            purple: {
+              600: '#7c4dff',
+              500: '#9876ff',
+              400: '#b399ff',
+              300: '#d1bfff'
+            }
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          }
         }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F3F4F6;
+    }
+    .cream-bg {
+      background-color: #FFF6E9;
+    }
+    .yellow-bg {
+      background-color: #FFCC66;
+    }
+    .light-purple-bg {
+      background-color: #E6DDFF;
+    }
+    .purple-gradient {
+      background-color: #7c4dff;
+    }
+    .chart-bar {
+      background-color: #7c4dff;
+      border-radius: 9999px;
+      width: 1.5rem;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <main class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- 1. Create and Schedule Content -->
-        <section class="bg-yellow-50 rounded-lg p-6">
-            <h2 class="text-xl font-bold">Create and schedule content <span class="text-purple-700">quicker.</span></h2>
-            <button class="mt-4 bg-yellow-500 text-purple-700 px-4 py-2 rounded-full flex items-center">
-                Create Post <span class="ml-2">★ →</span>
-            </button>
-        </section>
-
-        <!-- 2. Social Media 10x Faster with AI (Spans 2 columns on medium screens) -->
-        <section class="bg-purple-800 text-white rounded-lg p-6 md:col-span-2">
-            <h1 class="text-2xl md:text-4xl font-bold">Social Media <span class="text-yellow-300">10x Faster with AI</span></h1>
-            <div class="flex mt-2">
-                <span class="text-yellow-400">★★★★★</span>
-                <p class="ml-2 text-sm">Over 4,000 5-star reviews</p>
+<body class="min-h-screen bg-gray-100 p-8 font-inter">
+  <div class="max-w-7xl mx-auto grid grid-cols-12 gap-4">
+    
+    <!-- Create and schedule content -->
+    <div class="col-span-12 md:col-span-3 cream-bg rounded-3xl p-8 flex flex-col">
+      <div class="flex-grow">
+        <h2 class="text-3xl font-bold leading-tight">
+          Create and schedule content
+          <span class="text-purple-600 block">quicker.</span>
+        </h2>
+      </div>
+      <div class="mt-auto">
+        <button class="bg-yellow-300 text-black font-medium rounded-full px-6 py-3 flex items-center">
+          Create Post
+          <svg class="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
+        <!-- Arrow pointer -->
+        <div class="w-6 h-6 mt-4 ml-20">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 4L20 20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Social Media 10x Faster with AI -->
+    <div class="col-span-12 md:col-span-6 purple-gradient rounded-3xl p-8 flex flex-col">
+      <div class="text-center text-white">
+        <h1 class="text-4xl font-bold mb-4">
+          Social Media <span class="text-yellow-300">10x</span>
+          <span class="block text-5xl">Faster with AI</span>
+        </h1>
+        <div class="my-6 flex items-center justify-center space-x-1">
+          <!-- Star Rating -->
+          <div class="flex items-center justify-center space-x-1">
+            <svg class="w-6 h-6 text-gold fill-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>
+            <svg class="w-6 h-6 text-gold fill-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>
+            <svg class="w-6 h-6 text-gold fill-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>
+            <svg class="w-6 h-6 text-gold fill-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>
+            <svg class="w-6 h-6 text-gold fill-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+        <p class="text-lg">Over 4,000 5-star reviews</p>
+      </div>
+    </div>
+    
+    <!-- Schedule to social media -->
+    <div class="col-span-12 md:col-span-3 light-purple-bg rounded-3xl p-8 flex flex-col">
+      <h2 class="text-2xl font-bold mb-6">
+        Schedule to<br />social media.
+      </h2>
+      <div class="bg-white rounded-xl p-4">
+        <h3 class="font-medium mb-4">Best Time to Post</h3>
+        <!-- Weekday Selector -->
+        <div class="flex space-x-2">
+          <button class="w-12 h-8 text-sm rounded-full bg-red-200 text-red-600">Mon</button>
+          <button class="w-12 h-8 text-sm rounded-full bg-gray-100 text-gray-500">Tue</button>
+          <button class="w-12 h-8 text-sm rounded-full bg-gray-100 text-gray-500">Wed</button>
+          <button class="w-12 h-8 text-sm rounded-full bg-gray-100 text-gray-500">Thu</button>
+        </div>
+        <div class="mt-6">
+          <!-- Activity Chart -->
+          <div class="w-full">
+            <div class="text-xs text-green-600 font-medium mb-1">Most Active</div>
+            <div class="flex justify-between space-x-6 mt-4">
+              <div class="flex flex-col items-center justify-end h-32">
+                <div class="chart-bar bg-purple-600" style="height: 80px;"></div>
+                <div class="text-xs mt-2 text-gray-500">12a</div>
+              </div>
+              <div class="flex flex-col items-center justify-end h-32">
+                <div class="chart-bar bg-purple-600" style="height: 100px;"></div>
+                <div class="text-xs mt-2 text-gray-500">3a</div>
+              </div>
+              <div class="flex flex-col items-center justify-end h-32">
+                <div class="chart-bar bg-green-500" style="height: 120px;"></div>
+                <div class="text-xs mt-2 text-gray-500">6a</div>
+              </div>
+              <div class="flex flex-col items-center justify-end h-32">
+                <div class="chart-bar bg-purple-600" style="height: 110px;"></div>
+                <div class="text-xs mt-2 text-gray-500">9a</div>
+              </div>
+              <div class="flex flex-col items-center justify-end h-32">
+                <div class="chart-bar bg-purple-600" style="height: 90px;"></div>
+                <div class="text-xs mt-2 text-gray-500">12p</div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 text-sm">
+        <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+      </div>
+    </div>
+    
+    <!-- Social Account Row -->
+    <div class="col-span-12 md:col-span-6 bg-white rounded-3xl p-6">
+      <div class="flex flex-wrap gap-4">
+        <!-- Instagram Icon -->
+        <div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm">
+          <div class="bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-500 rounded-full w-10 h-10 flex items-center justify-center text-white mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="font-medium text-sm">@YourCo</div>
+            <div class="text-xs text-gray-500">12K Followers</div>
+          </div>
+        </div>
+        
+        <!-- Twitter Icon -->
+        <div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm">
+          <div class="bg-blue-400 rounded-full w-10 h-10 flex items-center justify-center text-white mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="font-medium text-sm">@YourCo</div>
+            <div class="text-xs text-gray-500">8K Followers</div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6">
+        <h2 class="text-2xl font-bold">
+          Manage multiple<br />accounts and<br />platforms.
+        </h2>
+      </div>
+    </div>
 
-        <!-- 3. Schedule to Social Media -->
-        <section class="bg-purple-100 rounded-lg p-6">
-            <h2 class="text-xl font-bold">Schedule to social media.</h2>
-            <div class="bg-white p-4 mt-2 rounded">
-                <p class="text-sm font-semibold">Best Time to Post</p>
-                <div class="flex justify-between text-xs mt-2">
-                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
-                </div>
-                <div class="flex justify-between mt-2">
-                    <div class="bar h-8 w-4"></div>
-                    <div class="bar h-12 w-4"></div>
-                    <div class="bar h-16 w-4"></div>
-                    <div class="bar h-10 w-4"></div>
-                </div>
-                <div class="flex justify-between text-xs mt-1">
-                    <span>12a</span><span>3a</span><span>6a</span><span>9a</span><span>12p</span>
-                </div>
-                <p class="text-xs mt-1">Most Active: 9a</p>
+    <!-- Maintain Consistent Posting -->
+    <div class="col-span-12 md:col-span-6 yellow-bg rounded-3xl p-8">
+      <div class="flex flex-col h-full">
+        <h2 class="text-2xl font-bold mb-6">
+          Maintain a<br />consistent<br />posting<br />schedule.
+        </h2>
+        <div class="mt-auto">
+          <!-- Weekly Schedule -->
+          <div class="w-full">
+            <div class="flex justify-between items-center bg-purple-600 text-white px-4 py-2 rounded-t-lg">
+              <div>August 2024</div>
+              <div class="text-sm bg-purple-500 px-3 py-1 rounded-full">Week1</div>
             </div>
-            <p class="text-sm mt-2">Optimize post timings to publish content at the perfect time for your audience.</p>
-        </section>
-
-        <!-- 4. Write Your Content Using AI -->
-        <section class="bg-yellow-300 rounded-lg p-6">
-            <h2 class="text-xl font-bold">Write your content using AI.</h2>
-            <div class="bg-white p-3 mt-2 rounded-lg shadow">
-                <div class="flex items-start">
-                    <div class="w-8 h-8 bg-purple-200 rounded-full mr-2"></div>
-                    <p class="text-sm">“Give me 5 tips to grow my follower on Insta!”</p>
+            <div class="flex justify-between px-12 py-4 bg-white rounded-b-lg">
+              <div class="flex items-center justify-center bg-purple-100 rounded-full w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="flex items-center justify-center bg-purple-100 rounded-full w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="flex items-center justify-center bg-purple-100 rounded-full w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="flex items-center justify-center bg-purple-100 rounded-full w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Write Content Using AI -->
+    <div class="col-span-12 md:col-span-3 yellow-bg rounded-3xl p-8">
+      <h2 class="text-2xl font-bold mb-6">
+        Write your<br />content<br />using AI.
+      </h2>
+      <div class="mt-4">
+        <!-- User Chat Bubble -->
+        <div class="flex justify-end mb-4">
+          <div class="max-w-xs rounded-2xl p-3 bg-yellow-200 text-black">
+            <p class="text-xs">Give me 5 tips to growth my follower on Instagram</p>
+          </div>
+          <div class="ml-2 bg-yellow-400 rounded-full w-8 h-8 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="mb-4 flex justify-center">
+          <span class="bg-purple-300 text-purple-700 p-1 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M18 13l-6 6-6-6"/>
+            </svg>
+          </span>
+        </div>
+        <!-- AI Chat Bubble -->
+        <div class="flex justify-start mb-4">
+          <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+            <img src="/lovable-uploads/97c50d03-81c9-4e1d-aa6a-a19381f061d3.png" alt="Avatar" class="w-full h-full object-cover" />
+          </div>
+          <div class="max-w-xs rounded-2xl p-3 bg-white text-black border border-gray-200">
+            <p class="text-xs">Certainly! Here are five tips to help you grow your Instagram followers:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Audience Growth -->
+    <div class="col-span-12 md:col-span-3 bg-white rounded-3xl p-6">
+      <div class="w-full flex items-center">
+        <div class="text-4xl font-bold mr-2">&gt;56%</div>
+        <div class="text-lg">faster audience growth</div>
+      </div>
+      <div class="mt-6">
+        <!-- Avatar Group -->
+        <div class="flex -space-x-2">
+          <div class="w-12 h-12 rounded-full border-2 border-white bg-purple-200 flex items-center justify-center overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="w-12 h-12 rounded-full border-2 border-white bg-yellow-200 flex items-center justify-center overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="w-12 h-12 rounded-full border-2 border-white bg-blue-200 flex items-center justify-center overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Grow Followers -->
+    <div class="col-span-12 md:col-span-6 purple-gradient rounded-3xl p-8 flex">
+      <div class="w-1/2">
+        <!-- Growth Chart -->
+        <div class="bg-white rounded-lg p-4">
+          <div class="flex flex-col">
+            <div class="text-sm text-gray-500">Follower Growth</div>
+            <div class="flex items-center">
+              <div class="text-2xl font-bold">20,642</div>
+              <div class="ml-2 text-xs text-green-500 bg-green-100 px-2 py-0.5 rounded">+80%</div>
+            </div>
+            
+            <div class="flex items-end space-x-2 h-24 mt-4">
+              <div class="bg-purple-600 rounded-full w-4 h-12"></div>
+              <div class="bg-purple-600 rounded-full w-4 h-16"></div>
+              <div class="bg-purple-600 rounded-full w-4 h-20"></div>
+              <div class="bg-purple-600 rounded-full w-4 h-24"></div>
+              <div class="bg-purple-600 rounded-full w-4 h-20"></div>
+            </div>
+            
+            <div class="flex items-center mt-4">
+              <div class="text-sm text-gray-500">Followers</div>
+              <div class="ml-auto flex items-center">
+                <div class="bg-yellow-300 rounded-full h-8 w-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-black">
+                    <path d="M12 19V5M5 12l7-7 7 7"/>
+                  </svg>
                 </div>
-                <div class="flex items-start mt-2">
-                    <div class="w-8 h-8 bg-purple-200 rounded-full mr-2"></div>
-                    <p class="text-sm text-gray-600">“Certainly! Here are five tips to help you grow...”</p>
+                <div class="flex flex-col ml-2">
+                  <div class="text-lg font-bold">89,532</div>
+                  <div class="text-xs text-green-500">+10%</div>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <!-- 5. Manage Multiple Accounts -->
-        <section class="bg-white rounded-lg p-6">
-            <div class="flex space-x-2">
-                <span class="bg-gray-200 p-2 rounded flex items-center">
-                    <span class="w-4 h-4 bg-purple-500 rounded-full mr-1"></span> IG @YourCo
-                </span>
-                <span class="bg-gray-200 p-2 rounded flex items-center">
-                    <span class="w-4 h-4 bg-blue-500 rounded-full mr-1"></span> X @YourCo
-                </span>
-            </div>
-            <h2 class="text-xl font-bold mt-2">Manage multiple accounts and platforms.</h2>
-        </section>
-
-        <!-- 6. Maintain a Consistent Posting Schedule -->
-        <section class="bg-yellow-300 rounded-lg p-6">
-            <h2 class="text-xl font-bold">Maintain a consistent posting schedule.</h2>
-            <div class="bg-white p-3 mt-2 rounded">
-                <p class="text-sm">August 2024 - Week 1</p>
-                <div class="flex space-x-2 mt-2">
-                    <span class="bg-purple-500 text-white px-2 py-1 rounded">✔ Mon</span>
-                    <span class="bg-gray-200 px-2 py-1 rounded">Tue</span>
-                    <span class="bg-purple-500 text-white px-2 py-1 rounded">✔ Wed</span>
-                    <span class="bg-gray-200 px-2 py-1 rounded">Thu</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. >56% Faster Audience Growth -->
-        <section class="bg-white rounded-lg p-6">
-            <h2 class="text-xl font-bold">>56% faster audience growth <span class="text-purple-700">↑</span></h2>
-            <div class="flex space-x-2 mt-4">
-                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-            </div>
-        </section>
-
-        <!-- 8. Follower Growth -->
-        <section class="bg-purple-200 rounded-lg p-6">
-            <h2 class="text-xl font-bold">Follower Growth</h2>
-            <p class="text-2xl font-bold">20,642 <span class="text-green-600">+40%</span></p>
-            <div class="bg-white p-2 mt-2 rounded">
-                <div class="flex space-x-1">
-                    <div class="bar h-6 w-4"></div>
-                    <div class="bar h-8 w-4"></div>
-                    <div class="bar h-4 w-4"></div>
-                </div>
-                <p class="text-sm mt-1">Followers 89,532 <span class="text-green-600">+70%</span></p>
-            </div>
-        </section>
-
-        <!-- 9. Grow Followers with Non-Stop Content -->
-        <section class="bg-purple-800 text-white rounded-lg p-6">
-            <h2 class="text-xl font-bold">Grow followers with non-stop content.</h2>
-        </section>
-    </main>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 flex items-center pl-6">
+        <h2 class="text-3xl font-bold text-white">
+          Grow followers with non-stop content.
+        </h2>
+      </div>
+    </div>
+    
+  </div>
 </body>
 </html>
